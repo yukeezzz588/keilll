@@ -1,29 +1,330 @@
-while True: 
-print("TUTORIAL SYSTEM") 
-print("\n[1] PRELIM") 
-print("[2] MIDTERM") 
-print("[3] FINALS") 
-print("[4] EXIT") 
-preview = int(input("Pick a term: ")) 
-if preview == 1:
- print("\nLESSONS IN PRELIM") 
-print("[1] Introduction to Python")
- print("[2] Python Syntax")
- print("[3] Print Statement")
- print("[4] Python Comments")
- print("[5] Variables and Constants") 
-print("[6] Basic Data Types") 
-print("[7] Lesson 7") 
-print("[8] Lesson 8") 
-lesson = int(input("\nEnter lesson: "))
- if lesson == 1: 
-print(""" ========== LESSON 1 ========== 
-WHAT IS PYTHON PROGRAMMING? 
-Python is a popular programming language 
-created by Guido van Rossum in 1991. 
-He designed it to be simple, 
-readable, and easy to learn. 
-WHAT IS PYTHON LANGUAGE? 
-Python is a high-level 
-programming language used to create 
-different programs and applications. """) 
+
+while True:
+    print("\n================================")
+    print("       PYTHON TUTORIAL")
+    print("================================")
+
+    print("\n========== PRELIM ==========")
+    print("1. Introduction to Programming")
+    print("2. Basic Syntax")
+    print("3. Printing Output")
+    print("4. Python Comments")
+    print("5. Variables and Data")
+    print("6. Basic Data Types")
+    print("7. Arithmetic Operators")
+    print("8. Basic Input and Output")
+
+    print("\n========== MIDTERM ==========")
+    print("9. Conditional Statements")
+    print("10. Logical Operators")
+
+    print("\n========== FINALS ==========")
+    print("11. Introduction to Loops")
+
+    print("\n0. Exit")
+
+    pili = input("\nChoose a lesson: ")
+
+    # PRELIM LESSONS
+
+    if pili == "1":
+        print("\n===== LESSON 1: INTRODUCTION TO PROGRAMMING =====")
+        print("\nProgramming is the process of creating instructions")
+        print("that tell a computer what to do.")
+        print("Programmers use programming languages to communicate")
+        print("with computers and create different applications.")
+
+        print("\nExample:")
+        print('print("Hello, World!")')
+
+        print("\nOutput:")
+        print("Hello, World!")
+
+        print("\nExplanation:")
+        print("This is a simple Python instruction that displays")
+        print("the message Hello, World! on the screen.")
+
+    elif pili == "2":
+        print("\n===== LESSON 2: BASIC SYNTAX =====")
+        print("\nSyntax refers to the rules and structure of writing")
+        print("code in a programming language.")
+        print("Python has specific rules that programmers must follow.")
+
+        print("\nImportant Rules:")
+        print("1. Python is case-sensitive.")
+        print("2. Indentation is important.")
+        print("3. Statements must follow proper syntax.")
+
+        print("\nExample of correct syntax:")
+        print('name = "Alex"')
+        print('print(name)')
+
+        print("\nOutput:")
+        print("Alex")
+
+        print("\nExplanation:")
+        print("The variable name stores the word Alex.")
+        print("The print statement displays its value.")
+
+    elif pili == "3":
+        print("\n===== LESSON 3: PRINTING OUTPUT =====")
+        print("\nThe print() function is used to display information")
+        print("on the screen. It can display words, numbers,")
+        print("and the values stored in variables.")
+
+        print("\nExample 1:")
+        print('print("Welcome to Python!")')
+
+        print("\nOutput:")
+        print("Welcome to Python!")
+
+        print("\nExample 2:")
+        print("print(100)")
+
+        print("\nOutput:")
+        print("100")
+
+        print("\nExplanation:")
+        print("The print() function displays whatever information")
+        print("is placed inside its parentheses.")
+
+    elif pili == "4":
+        print("\n===== LESSON 4: PYTHON COMMENTS =====")
+        print("\nComments are notes written inside a program.")
+        print("They help programmers understand what the code does.")
+        print("Python ignores comments when running a program.")
+
+        print("\nImportant Symbol:")
+        print("# - Used to write a single-line comment.")
+
+        print("\nExample:")
+        print("# This is a comment")
+        print('print("Hello!")')
+
+        print("\nOutput:")
+        print("Hello!")
+
+        print("\nExplanation:")
+        print("The first line is a comment, so Python ignores it.")
+        print("Only the print statement displays an output.")
+
+    elif pili == "5":
+        print("\n===== LESSON 5: VARIABLES AND DATA =====")
+        print("\nA variable is a named storage location used to hold")
+        print("information in a program.")
+        print("Variables allow programmers to store and reuse data.")
+
+        print("\nExample:")
+        print('name = "Alex"')
+        print("age = 18")
+        print("print(name)")
+        print("print(age)")
+
+        print("\nOutput:")
+        print("Alex")
+        print("18")
+        print("\nDo you wanna try?: ")
+
+        print("\nExplanation:")
+        print("The variable name stores the text Alex.")
+        print("The variable age stores the number 18.")
+        print("The print() function displays their values.")
+
+    elif pili == "6":
+        print("\n===== LESSON 6: BASIC DATA TYPES =====")
+        print("\nData types identify what kind of information")
+        print("a variable stores. Python has different data types.")
+
+        print("\n1. String (str)")
+        print("Used for text and characters.")
+        print('Example: name = "John"')
+
+        print("\n2. Integer (int)")
+        print("Used for whole numbers without decimal points.")
+        print("Example: age = 18")
+
+        print("\n3. Float")
+        print("Used for numbers with decimal points.")
+        print("Example: price = 25.50")
+
+        print("\n4. Boolean (bool)")
+        print("Used for logical values: True or False.")
+        print("Example: is_student = True")
+
+        print("\nExplanation:")
+        print("Each data type stores a different kind of information.")
+        print("Choosing the correct data type helps organize your program.")
+
+    elif pili == 7:
+        print("\n===== LESSON 7: ARITHMETIC OPERATORS =====")
+        print("\nArithmetic operators are symbols used to perform")
+        print("mathematical calculations in Python.")
+
+        print("\nCommon Arithmetic Operators:")
+        print("+ Addition")
+        print("- Subtraction")
+        print("* Multiplication")
+        print("/ Division")
+        print("% Modulus (remainder)")
+
+        print("\nExample:")
+        print("num1 = 10")
+        print("num2 = 5")
+        print("print(num1 + num2)")
+        print("print(num1 * num2)")
+
+        print("\nOutput:")
+        print("15")
+        print("50")
+
+        print("\nExplanation:")
+        print("The first operation adds 10 and 5.")
+        print("The second operation multiplies 10 and 5.")
+
+    elif pili == "8":
+        print("\n===== LESSON 8: BASIC INPUT AND OUTPUT =====")
+        print("\nInput allows users to enter information into a program.")
+        print("The input() function receives information from the user.")
+        print("The print() function displays information on the screen.")
+
+        print("\nExample:")
+        print('name = input("Enter your name: ")')
+        print('print("Hello", name)')
+
+        print("\nSample Output:")
+        print("Enter your name: Alex")
+        print("Hello Alex")
+
+        print("\nExplanation:")
+        print("The input() function receives the user's name.")
+        print("The program then displays a greeting using print().")
+
+    # MIDTERM LESSONS
+
+    elif pili == "9":
+        print("\n===== LESSON 9: CONDITIONAL STATEMENTS =====")
+        print("\nConditional statements allow a program to make decisions")
+        print("based on whether a condition is True or False.")
+
+        print("\nTypes of Conditional Statements:")
+        print("1. if - Checks the first condition.")
+        print("2. elif - Checks another condition if the first is False.")
+        print("3. else - Runs when all previous conditions are False.")
+
+        print("\nExample:")
+        print("age = 18")
+        print("if age >= 18:")
+        print('    print("Adult")')
+        print("else:")
+        print('    print("Minor")')
+
+        print("\nOutput:")
+        print("Adult")
+
+        print("\nExplanation:")
+        print("Since age is 18, the condition age >= 18 is True.")
+        print("Therefore, the program displays Adult.")
+
+    elif pili == "10":
+        print("\n===== LESSON 10: LOGICAL OPERATORS =====")
+        print("\nLogical operators are used to combine or reverse")
+        print("conditions in a program.")
+
+        print("\nThree Common Logical Operators:")
+
+        print("\n1. AND")
+        print("Returns True when both conditions are True.")
+
+        print("\n2. OR")
+        print("Returns True when at least one condition is True.")
+
+        print("\n3. NOT")
+        print("Reverses a Boolean value.")
+
+        print("\nExample:")
+        print("age = 18")
+        print("has_id = True")
+        print("if age >= 18 and has_id:")
+        print('    print("Access Granted")')
+        print("else:")
+        print('    print("Access Denied")')
+
+        print("\nOutput:")
+        print("Access Granted")
+
+        print("\nExplanation:")
+        print("The age condition is True and has_id is also True.")
+        print("Because both conditions are True, the program")
+        print("displays Access Granted.")
+
+    # FINALS LESSON
+
+    elif pili == "11":
+        print("\n===== LESSON 11: INTRODUCTION TO LOOPS =====")
+        print("\nLoops are used to repeat a block of code multiple times.")
+        print("They help programmers avoid writing the same instructions")
+        print("repeatedly.")
+
+        print("\nTypes of Loops:")
+
+        print("\n1. FOR LOOP")
+        print("Used to repeat code for a specific sequence or number of times.")
+
+        print("\nExample:")
+        print("for number in range(3):")
+        print('    print("Hello!")')
+
+        print("\nOutput:")
+        print("Hello!")
+        print("Hello!")
+        print("Hello!")
+
+        print("\n2. WHILE LOOP")
+        print("Repeats code while a given condition remains True.")
+
+        print("\nExample:")
+        print("count = 1")
+        print("while count <= 3:")
+        print("    print(count)")
+        print("    count = count + 1")
+
+        print("\nOutput:")
+        print("1")
+        print("2")
+        print("3")
+
+        print("\nExplanation:")
+        print("The for loop repeats a specific number of times.")
+        print("The while loop continues as long as its condition is True.")
+
+    elif pili == "0":
+        print("\nThank you for using the Python Tutorial!")
+        print("Keep learning and practicing Python!")
+        break
+
+    else:
+        print("\nInvalid choice! Please select a lesson from 1 to 11.")
+        continue
+
+    # AFTER EACH LESSON
+
+    print("\n================================")
+    print("What would you like to do next?")
+    print("1. Continue to another lesson")
+    print("2. Exit the program")
+    print("================================")
+
+    nextt = input("Enter your choice: ")
+
+    if nextt == "1":
+        print("\nReturning to the lesson menu...")
+        continue
+
+    elif nextt == "2":
+        print("\nThank you for using the Python Tutorial!")
+        print("Keep learning and practicing Python!")
+        break
+
+    else:
+        print("\nInvalid choice. Returning to the main menu...")
+    

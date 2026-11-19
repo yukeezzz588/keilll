@@ -1,10 +1,10 @@
-tapos = True
+tapos = True #pag nag false mag eexit
 
 while tapos:
     print("\n================================")
     print("         PYTHON TUTORIAL")
     print("================================")
-
+#lessons
     print("\nLESSONS")
 
     print("\n--- PRELIM ---")
@@ -31,7 +31,7 @@ while tapos:
     print("[2] MIDTERM")
     print("[3] FINALS")
     print("[0] EXIT")
-
+#choicesssssssss
     pili = input("\nChoose a term: ")
 
     if pili == "0":
@@ -58,7 +58,7 @@ while tapos:
 
             elif pili == "1":
                 print("\nLESSON 1: INTRODUCTION TO PROGRAMMING")
-                print("\nSHORT DESCRIPTION:")
+                print("\nSHORT DESCRIPTION:") #overviews
                 print("Programming is the process of creating instructions")
                 print("that tell a computer what to do.")
 
@@ -88,7 +88,7 @@ while tapos:
 
             elif pili == "2":
                 print("\nLESSON 2: BASIC SYNTAX")
-                print("\nSHORT DESCRIPTION:")
+                print("\nSHORT DESCRIPTION:")#overviews
                 print("Syntax refers to the rules and structure used")
                 print("when writing a program in Python.")
 
@@ -119,7 +119,7 @@ while tapos:
 
             elif pili == "3":
                 print("\nLESSON 3: PRINTING OUTPUT")
-                print("\nSHORT DESCRIPTION:")
+                print("\nSHORT DESCRIPTION:") #overviews
                 print("The print() function is used to display text,")
                 print("numbers, and other information on the screen.")
 
@@ -150,7 +150,7 @@ while tapos:
 
             elif pili == "4":
                 print("\nLESSON 4: PYTHON COMMENTS")
-                print("\nSHORT DESCRIPTION:")
+                print("\nSHORT DESCRIPTION:") #overviews
                 print("Comments are notes written inside a program.")
                 print("They help explain what a particular code does.")
 
@@ -180,7 +180,7 @@ while tapos:
 
             elif pili == "5":
                 print("\nLESSON 5: VARIABLES AND DATA")
-                print("\nSHORT DESCRIPTION:")
+                print("\nSHORT DESCRIPTION:")#overviews
                 print("Variables are used to store information that")
                 print("can be used and changed inside a program.")
 
@@ -213,7 +213,7 @@ while tapos:
 
             elif pili == "6":
                 print("\nLESSON 6: BASIC DATA TYPES")
-                print("\nSHORT DESCRIPTION:")
+                print("\nSHORT DESCRIPTION:")#overviews
                 print("Data types identify what kind of information")
                 print("is stored in a variable.")
 
@@ -244,7 +244,7 @@ while tapos:
 
             elif pili == "7":
                 print("\nLESSON 7: ARITHMETIC OPERATORS")
-                print("\nSHORT DESCRIPTION:")
+                print("\nSHORT DESCRIPTION:")#overviews
                 print("Arithmetic operators are symbols used to")
                 print("perform mathematical calculations in Python.")
 
@@ -277,11 +277,252 @@ while tapos:
 
             elif pili == "8":
                 print("\nLESSON 8: BASIC INPUT AND OUTPUT")
-                print("\nSHORT DESCRIPTION:")
+                print("\nSHORT DESCRIPTION:")#overviews
                 print("The input() function allows users to enter")
                 print("information, while print() displays information.")
 
                 print("\n[1] View Full Lesson")
+                print("[2] Pick Another Lesson")
+
+                sunod = input("\nChoose: ")
+
+                if sunod == "1":
+                    print("\n========== FULL LESSON ==========")
+                    print("\nThe input() function allows users to enter")
+                    print("information using their keyboard.")
+                    print("The print() function displays the entered data.")
+
+                    print("\nDEMONSTRATION:")
+                    print('name = input("Enter your name: ")')
+                    print("print(name)")
+
+                    print("\nSAMPLE OUTPUT:")
+                    print("Enter your name: Alex")
+                    print("Alex")
+
+                elif sunod == "2":
+                    continue
+                else:
+                    print("\nINVALID CHOICE!")
+                    continue
+
+            else:
+                print("\nINVALID CHOICE!")
+                continue
+
+            print("\n================================")
+            print("[1] Pick Another Lesson")
+            print("[2] Back to Main Menu")
+            print("[0] Exit Program")
+
+            sunod = input("\nChoose: ")
+
+            if sunod == "1":
+                continue
+            elif sunod == "2":
+                break
+            elif sunod == "0":
+                tapos = False
+                break
+            else:
+                print("\nINVALID CHOICE!")
+                continue
+
+        if not tapos:
+            print("\nThank you for using Python Tutorial!")
+
+    elif pili == "2":
+        while True:
+            print("\n========== MIDTERM LESSONS ==========")
+            print("[9] Conditional Statements")
+            print("[10] Logical Operators")
+            print("[0] Back to Main Menu")
+
+            pili = input("\nChoose a lesson: ")
+
+            if pili == "0":
+                break
+
+            elif pili == "9":
+                print("\nLESSON 9: CONDITIONAL STATEMENTS")
+                print("\nSHORT DESCRIPTION:")#overviews
+                print("Conditional statements allow a program to make")
+                print("decisions based on whether a condition is True.")
+
+                print("\n[1] View Full Lesson")
+                print("[2] Pick Another Lesson")
+
+                sunod = input("\nChoose: ")
+
+                if sunod == "1":
+                    print("\n========== FULL LESSON ==========")
+                    print("\nPython uses if, elif, and else to make decisions.")
+                    print("The if statement checks the first condition.")
+                    print("The elif statement checks another condition.")
+                    print("The else statement runs when the other conditions")
+                    print("are not met.")
+
+                    print("\nDEMONSTRATION:")
+                    print("age = 18")
+                    print("if age >= 18:")
+                    print('    print("Adult")')
+                    print("else:")
+                    print('    print("Minor")')
+
+                    print("\nOUTPUT:")
+                    print("Adult")
+
+                elif sunod == "2":
+                    continue
+                else:
+                    print("\nINVALID CHOICE!")
+                    continue
+
+            elif pili == "10":
+                print("\nLESSON 10: LOGICAL OPERATORS")
+                print("\nSHORT DESCRIPTION:")#overviews
+                print("Logical operators combine or reverse conditions")
+                print("to help a program make decisions.")
+
+                print("\n[1] View Full Lesson")
+                print("[2] Pick Another Lesson")
+
+                sunod = input("\nChoose: ")
+
+                if sunod == "1":
+                    print("\n========== FULL LESSON ==========")
+                    print("\nAND - Both conditions must be True.")
+                    print("OR - At least one condition must be True.")
+                    print("NOT - Reverses a condition.")
+
+                    print("\nDEMONSTRATION:")
+                    print("age = 18")
+                    print("has_id = True")
+                    print("if age >= 18 and has_id:")
+                    print('    print("Access Granted")')
+
+                    print("\nOUTPUT:")
+                    print("Access Granted")
+
+                elif sunod == "2":
+                    continue
+                else:
+                    print("\nINVALID CHOICE!")
+                    continue
+
+            else:
+                print("\nINVALID CHOICE!")
+                continue
+
+            print("\n================================")
+            print("[1] Pick Another Lesson")
+            print("[2] Back to Main Menu")
+            print("[0] Exit Program")
+
+            sunod = input("\nChoose: ")
+
+            if sunod == "1":
+                continue
+            elif sunod == "2":
+                break
+            elif sunod == "0":
+                tapos = False
+                break    
+            else:
+                print("\nINVALID CHOICE!")
+                continue
+
+        if not tapos:
+            print("\nThank you for using Python Tutorial!")
+
+    elif pili == "3":
+        while True:
+            print("\n========== FINALS LESSONS ==========")
+            print("[11] Introduction to Loops")
+            print("[0] Back to Main Menu")
+
+            pili = input("\nChoose a lesson: ")
+
+            if pili == "0":
+                break
+
+            elif pili == "11":
+                print("\nLESSON 11: INTRODUCTION TO LOOPS")
+                print("\nSHORT DESCRIPTION:")#overviews        
+                print("Loops allow a program to repeat instructions")
+                print("without writing the same code many times.")
+
+                print("\n[1] View Full Lesson")
+                print("[2] Pick Another Lesson")
+
+                sunod = input("\nChoose: ")
+
+                if sunod == "1":
+                    print("\n========== FULL LESSON ==========")
+                    print("\nThere are different types of loops in Python.")
+
+                    print("\nFOR LOOP")
+                    print("A for loop repeats instructions for each item")
+                    print("in a sequence.")
+
+                    print("\nDEMONSTRATION:")
+                    print("for number in range(3):")
+                    print('    print("Hello!")')
+
+                    print("\nOUTPUT:")
+                    print("Hello!")
+                    print("Hello!")
+                    print("Hello!")
+
+                    print("\nWHILE LOOP")
+                    print("A while loop repeats instructions as long as")
+                    print("a condition remains True.")
+
+                    print("\nDEMONSTRATION:")
+                    print("count = 1")
+                    print("while count <= 3:")
+                    print("    print(count)")
+                    print("    count = count + 1")
+
+                    print("\nOUTPUT:")
+                    print("1")
+                    print("2")
+                    print("3")
+
+                elif sunod == "2":
+                    continue
+                else:
+                    print("\nINVALID CHOICE!")
+                    continue
+
+            else:
+                print("\nINVALID CHOICE!")
+                continue
+
+            print("\n================================")
+            print("[1] Pick Another Lesson")
+            print("[2] Back to Main Menu")
+            print("[0] Exit Program")
+
+            sunod = input("\nChoose: ")
+
+            if sunod == "1": #lessons continue
+                continue
+            elif sunod == "2": #balik menu
+                break
+            elif sunod == "0": #aalis na kahit masakit
+                tapos = False
+                break
+            else:
+                print("\nINVALID CHOICE!")
+                continue
+
+        if not tapos:
+            print("\nThank you for using Python Tutorial!")
+          #tapos
+    else:
+        print("\nINVALID CHOICE! Please select again.")
+           print("\n[1] View Full Lesson")
                 print("[2] Pick Another Lesson")
 
                 sunod = input("\nChoose: ")

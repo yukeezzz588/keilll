@@ -1,4 +1,4 @@
-import time #print ng mabagal
+import time
 
 def mabagal(teksto):
     for letra in teksto:
@@ -9,430 +9,559 @@ def mabagal(teksto):
 
 pangalan = input("Enter your name: ")
 
-mabagal("\n===================================")
-mabagal("       WELCOME TO PYTHON TUTORIAL")
-mabagal("===================================")
-mabagal("Hello, " + pangalan + "!")
-mabagal("Let's start learning Python!")
+mabagal("\n================================")
+mabagal("         PYTHON TUTORIAL")
+mabagal("================================")
+mabagal("Welcome, " + pangalan + "!")
 
 tapos = True
-progress = []
-
-mga_aralin = {
-    "1": "Introduction to Programming",
-    "2": "Basic Syntax",
-    "3": "Printing Output",
-    "4": "Python Comments",
-    "5": "Variables and Data",
-    "6": "Basic Data Types",
-    "7": "Arithmetic Operators",
-    "8": "Basic Input and Output",
-    "9": "Conditional Statements",
-    "10": "Logical Operators",
-    "11": "Introduction to Loops"
-}
-
-deskripsyon = {
-    "1": "Learn what programming is and how it works.",
-    "2": "Understand the basic rules when writing Python code.",
-    "3": "Learn how to display information using print().",
-    "4": "Understand how comments work in Python.",
-    "5": "Learn how to store information using variables.",
-    "6": "Understand the different types of data in Python.",
-    "7": "Learn how to perform mathematical operations.",
-    "8": "Learn how to receive and display user information.",
-    "9": "Learn how to make decisions using if, elif, and else.",
-    "10": "Understand how logical operators work.",
-    "11": "Learn how to repeat instructions using loops."
-}
-
-nilalaman = {
-    "1": """
-INTRODUCTION TO PROGRAMMING
-
-Programming is the process of creating instructions
-that tell a computer what to do.
-
-Python is one of the programming languages used
-to create different types of programs.
-
-DEMONSTRATION:
-
-print("Hello, World!")
-
-OUTPUT:
-Hello, World!
-""",
-
-    "2": """
-BASIC SYNTAX
-
-Syntax refers to the rules when writing Python code.
-Python is also case-sensitive, meaning uppercase
-and lowercase letters are different.
-
-DEMONSTRATION:
-
-name = "Alex"
-print(name)
-
-OUTPUT:
-Alex
-""",
-
-    "3": """
-PRINTING OUTPUT
-
-The print() function is used to display information
-on the screen. It can display words, numbers,
-and variables.
-
-DEMONSTRATION:
-
-print("Welcome to Python!")
-print(100)
-
-OUTPUT:
-Welcome to Python!
-100
-""",
-
-    "4": """
-PYTHON COMMENTS
-
-Comments are notes written inside the code.
-They help explain what a certain part of the program does.
-
-Comments begin with the # symbol and are ignored
-when Python runs the program.
-
-DEMONSTRATION:
-
-# This is a comment
-print("Learning Python")
-
-OUTPUT:
-Learning Python
-""",
-
-    "5": """
-VARIABLES AND DATA
-
-Variables are used to store information.
-You can assign different values to a variable.
-
-DEMONSTRATION:
-
-name = "Alex"
-age = 18
-
-print(name)
-print(age)
-
-OUTPUT:
-Alex
-18
-""",
-
-    "6": """
-BASIC DATA TYPES
-
-Python has different data types:
-
-String - stores text.
-Integer - stores whole numbers.
-Float - stores decimal numbers.
-Boolean - stores True or False.
-
-DEMONSTRATION:
-
-name = "Alex"
-age = 18
-height = 5.5
-is_student = True
-
-print(name)
-print(age)
-print(height)
-print(is_student)
-
-OUTPUT:
-Alex
-18
-5.5
-True
-""",
-
-    "7": """
-ARITHMETIC OPERATORS
-
-Arithmetic operators are used to perform
-mathematical operations in Python.
-
-+  Addition
--  Subtraction
-*  Multiplication
-/  Division
-%  Modulus
-// Floor Division
-** Exponent
-
-DEMONSTRATION:
-
-num1 = 10
-num2 = 5
-
-print(num1 + num2)
-print(num1 - num2)
-print(num1 * num2)
-print(num1 / num2)
-print(num1 % num2)
-print(num1 // 3)
-print(num1 ** 2)
-
-OUTPUT:
-15
-5
-50
-2.0
-0
-3
-100
-
-EXPLANATION:
-
-+ Addition - adds two numbers.
-- Subtraction - subtracts one number from another.
-* Multiplication - multiplies two numbers.
-/ Division - divides two numbers.
-% Modulus - returns the remainder.
-// Floor Division - divides and rounds down.
-** Exponent - raises a number to a power.
-""",
-
-    "8": """
-BASIC INPUT AND OUTPUT
-
-The input() function allows users to enter
-information through the keyboard.
-
-The print() function displays the information.
-
-DEMONSTRATION:
-
-name = input("Enter your name: ")
-print("Hello", name)
-
-EXAMPLE OUTPUT:
-Enter your name: Alex
-Hello Alex
-""",
-
-    "9": """
-CONDITIONAL STATEMENTS
-
-Conditional statements allow a program to make
-decisions depending on a condition.
-
-if - checks the first condition.
-elif - checks another condition.
-else - runs when the other conditions are false.
-
-DEMONSTRATION:
-
-age = 18
-
-if age >= 18:
-    print("You are an adult.")
-else:
-    print("You are a minor.")
-
-OUTPUT:
-You are an adult.
-""",
-
-    "10": """
-LOGICAL OPERATORS
-
-Logical operators are used to combine or
-reverse conditions.
-
-and - both conditions must be True.
-or - at least one condition must be True.
-not - reverses the result.
-
-DEMONSTRATION:
-
-age = 18
-has_id = True
-
-if age >= 18 and has_id:
-    print("Access granted.")
-else:
-    print("Access denied.")
-
-OUTPUT:
-Access granted.
-""",
-
-    "11": """
-INTRODUCTION TO LOOPS
-
-Loops are used to repeat a block of code.
-
-for loop - repeats code for a specific sequence.
-while loop - repeats code while a condition is True.
-
-DEMONSTRATION:
-
-for number in range(3):
-    print("Hello")
-
-OUTPUT:
-Hello
-Hello
-Hello
-
-ANOTHER DEMONSTRATION:
-
-count = 1
-
-while count <= 3:
-    print(count)
-    count = count + 1
-
-OUTPUT:
-1
-2
-3
-"""
-}
-
 
 while tapos:
-
-    mabagal("\n===================================")
-    mabagal("           PYTHON TUTORIAL")
-    mabagal("===================================")
+    mabagal("\n================================")
+    mabagal("         PYTHON TUTORIAL")
+    mabagal("================================")
 
     mabagal("\nLESSONS")
 
-    mabagal("\nPRELIM")
-    for number in range(1, 9):
-        mabagal("[" + str(number) + "] " + mga_aralin[str(number)])
+    mabagal("\n--- PRELIM ---")
+    mabagal("[1] Introduction to Programming")
+    mabagal("[2] Basic Syntax")
+    mabagal("[3] Printing Output")
+    mabagal("[4] Python Comments")
+    mabagal("[5] Variables and Data")
+    mabagal("[6] Basic Data Types")
+    mabagal("[7] Arithmetic Operators")
+    mabagal("[8] Basic Input and Output")
 
-    mabagal("\nMIDTERM")
-    for number in range(9, 11):
-        mabagal("[" + str(number) + "] " + mga_aralin[str(number)])
+    mabagal("\n--- MIDTERM ---")
+    mabagal("[9] Conditional Statements")
+    mabagal("[10] Logical Operators")
 
-    mabagal("\nFINALS")
-    mabagal("[11] " + mga_aralin["11"])
+    mabagal("\n--- FINALS ---")
+    mabagal("[11] Introduction to Loops")
 
-    mabagal("\n========== LESSON PROGRESS ==========")
-    mabagal("Completed Lessons: " + str(len(progress)) + " / 11")
-
-    if len(progress) == 0:
-        mabagal("No completed lessons yet.")
-    else:
-        mabagal("Completed Lesson Numbers: " + str(progress))
-
-    mabagal("\n========== CHOICES ==========")
+    mabagal("\n================================")
+    mabagal("             CHOICES")
+    mabagal("================================")
     mabagal("[1] PRELIM")
     mabagal("[2] MIDTERM")
     mabagal("[3] FINALS")
     mabagal("[0] EXIT")
 
-    pili = input("\nEnter your choice: ")
+    pili = input("\nChoose a term: ")
 
     if pili == "0":
         tapos = False
 
     elif pili == "1":
-        saklaw = ["1", "2", "3", "4", "5", "6", "7", "8"]
-
-    elif pili == "2":
-        saklaw = ["9", "10"]
-
-    elif pili == "3":
-        saklaw = ["11"]
-
-    else:
-        mabagal("INVALID CHOICE!")
-        continue
-
-    if tapos == True:
         while True:
-
-            mabagal("\n========== LESSON MENU ==========")
-
-            for number in saklaw:
-                mabagal("[" + number + "] " + mga_aralin[number])
-
-            mabagal("[0] BACK TO MAIN MENU")
+            mabagal("\n========== PRELIM LESSONS ==========")
+            mabagal("[1] Introduction to Programming")
+            mabagal("[2] Basic Syntax")
+            mabagal("[3] Printing Output")
+            mabagal("[4] Python Comments")
+            mabagal("[5] Variables and Data")
+            mabagal("[6] Basic Data Types")
+            mabagal("[7] Arithmetic Operators")
+            mabagal("[8] Basic Input and Output")
+            mabagal("[0] Back to Main Menu")
 
             pili = input("\nChoose a lesson: ")
 
             if pili == "0":
                 break
 
-            elif pili in saklaw:
-
-                mabagal("\n========== LESSON DESCRIPTION ==========")
-                mabagal(mga_aralin[pili])
-                mabagal("\n" + deskripsyon[pili])
+            elif pili == "1":
+                mabagal("\nLESSON 1: INTRODUCTION TO PROGRAMMING")
+                mabagal("\nSHORT DESCRIPTION:")
+                mabagal("Programming is the process of creating instructions")
+                mabagal("that tell a computer what to do.")
 
                 mabagal("\n[1] View Full Lesson")
                 mabagal("[2] Pick Another Lesson")
 
-                sunod = input("\nEnter your choice: ")
+                sunod = input("\nChoose: ")
 
                 if sunod == "1":
+                    mabagal("\n========== FULL LESSON ==========")
+                    mabagal("\nProgramming is the process of creating instructions")
+                    mabagal("that tell a computer what to do.")
+                    mabagal("These instructions are written using programming")
+                    mabagal("languages such as Python, Java, and C++.")
 
-                    mabagal("\n===================================")
-                    mabagal(mga_aralin[pili])
-                    mabagal("===================================")
+                    mabagal("\nDEMONSTRATION:")
+                    mabagal('print("Hello, World!")')
 
-                    mabagal(nilalaman[pili])
-
-                    if pili not in progress:
-                        progress.append(pili)
-
-                    mabagal("\nLesson completed!")
-
-                    mabagal("\n========== NEXT ACTION ==========")
-                    mabagal("[1] Pick Another Lesson")
-                    mabagal("[2] Back to Main Menu")
-                    mabagal("[0] Exit Program")
-
-                    sunod = input("\nEnter your choice: ")
-
-                    if sunod == "1":
-                        continue
-
-                    elif sunod == "2":
-                        break
-
-                    elif sunod == "0":
-                        tapos = False
-                        break
-
-                    else:
-                        mabagal("INVALID CHOICE!")
-                        continue
+                    mabagal("\nOUTPUT:")
+                    mabagal("Hello, World!")
 
                 elif sunod == "2":
                     continue
-
                 else:
-                    mabagal("INVALID CHOICE!")
+                    mabagal("\nINVALID CHOICE!")
+                    continue
+
+            elif pili == "2":
+                mabagal("\nLESSON 2: BASIC SYNTAX")
+                mabagal("\nSHORT DESCRIPTION:")
+                mabagal("Syntax refers to the rules and structure used")
+                mabagal("when writing a program in Python.")
+
+                mabagal("\n[1] View Full Lesson")
+                mabagal("[2] Pick Another Lesson")
+
+                sunod = input("\nChoose: ")
+
+                if sunod == "1":
+                    mabagal("\n========== FULL LESSON ==========")
+                    mabagal("\nPython syntax refers to the rules that must")
+                    mabagal("be followed when writing Python code.")
+                    mabagal("Python is also case-sensitive, meaning that")
+                    mabagal("uppercase and lowercase letters are different.")
+
+                    mabagal("\nDEMONSTRATION:")
+                    mabagal('name = "Alex"')
+                    mabagal("print(name)")
+
+                    mabagal("\nOUTPUT:")
+                    mabagal("Alex")
+
+                elif sunod == "2":
+                    continue
+                else:
+                    mabagal("\nINVALID CHOICE!")
+                    continue
+
+            elif pili == "3":
+                mabagal("\nLESSON 3: PRINTING OUTPUT")
+                mabagal("\nSHORT DESCRIPTION:")
+                mabagal("The print() function is used to display text,")
+                mabagal("numbers, and other information on the screen.")
+
+                mabagal("\n[1] View Full Lesson")
+                mabagal("[2] Pick Another Lesson")
+
+                sunod = input("\nChoose: ")
+
+                if sunod == "1":
+                    mabagal("\n========== FULL LESSON ==========")
+                    mabagal("\nThe print() function allows programmers to")
+                    mabagal("display information on the screen.")
+                    mabagal("It can display words, numbers, and variables.")
+
+                    mabagal("\nDEMONSTRATION:")
+                    mabagal('print("Welcome to Python!")')
+                    mabagal("print(100)")
+
+                    mabagal("\nOUTPUT:")
+                    mabagal("Welcome to Python!")
+                    mabagal("100")
+
+                elif sunod == "2":
+                    continue
+                else:
+                    mabagal("\nINVALID CHOICE!")
+                    continue
+
+            elif pili == "4":
+                mabagal("\nLESSON 4: PYTHON COMMENTS")
+                mabagal("\nSHORT DESCRIPTION:")
+                mabagal("Comments are notes written inside a program.")
+                mabagal("They help explain what a particular code does.")
+
+                mabagal("\n[1] View Full Lesson")
+                mabagal("[2] Pick Another Lesson")
+
+                sunod = input("\nChoose: ")
+
+                if sunod == "1":
+                    mabagal("\n========== FULL LESSON ==========")
+                    mabagal("\nComments help programmers understand their code.")
+                    mabagal("Python ignores comments when running a program.")
+                    mabagal("A hashtag (#) is used to create a comment.")
+
+                    mabagal("\nDEMONSTRATION:")
+                    mabagal("# This is a comment")
+                    mabagal('print("Learning Python")')
+
+                    mabagal("\nOUTPUT:")
+                    mabagal("Learning Python")
+
+                elif sunod == "2":
+                    continue
+                else:
+                    mabagal("\nINVALID CHOICE!")
+                    continue
+
+            elif pili == "5":
+                mabagal("\nLESSON 5: VARIABLES AND DATA")
+                mabagal("\nSHORT DESCRIPTION:")
+                mabagal("Variables are used to store information that")
+                mabagal("can be used and changed inside a program.")
+
+                mabagal("\n[1] View Full Lesson")
+                mabagal("[2] Pick Another Lesson")
+
+                sunod = input("\nChoose: ")
+
+                if sunod == "1":
+                    mabagal("\n========== FULL LESSON ==========")
+                    mabagal("\nA variable is a name used to store data.")
+                    mabagal("It can contain information such as names,")
+                    mabagal("numbers, and other values.")
+
+                    mabagal("\nDEMONSTRATION:")
+                    mabagal('name = "Alex"')
+                    mabagal("age = 18")
+                    mabagal("print(name)")
+                    mabagal("print(age)")
+
+                    mabagal("\nOUTPUT:")
+                    mabagal("Alex")
+                    mabagal("18")
+
+                elif sunod == "2":
+                    continue
+                else:
+                    mabagal("\nINVALID CHOICE!")
+                    continue
+
+            elif pili == "6":
+                mabagal("\nLESSON 6: BASIC DATA TYPES")
+                mabagal("\nSHORT DESCRIPTION:")
+                mabagal("Data types identify what kind of information")
+                mabagal("is stored in a variable.")
+
+                mabagal("\n[1] View Full Lesson")
+                mabagal("[2] Pick Another Lesson")
+
+                sunod = input("\nChoose: ")
+
+                if sunod == "1":
+                    mabagal("\n========== FULL LESSON ==========")
+                    mabagal("\nSTRING - Used for text.")
+                    mabagal('Example: name = "Alex"')
+
+                    mabagal("\nINTEGER - Used for whole numbers.")
+                    mabagal("Example: age = 18")
+
+                    mabagal("\nFLOAT - Used for decimal numbers.")
+                    mabagal("Example: grade = 95.5")
+
+                    mabagal("\nBOOLEAN - Used for True or False values.")
+                    mabagal("Example: is_student = True")
+
+                elif sunod == "2":
+                    continue
+                else:
+                    mabagal("\nINVALID CHOICE!")
+                    continue
+
+            elif pili == "7":
+                mabagal("\nLESSON 7: ARITHMETIC OPERATORS")
+                mabagal("\nSHORT DESCRIPTION:")
+                mabagal("Arithmetic operators are symbols used to")
+                mabagal("perform mathematical calculations in Python.")
+
+                mabagal("\n[1] View Full Lesson")
+                mabagal("[2] Pick Another Lesson")
+
+                sunod = input("\nChoose: ")
+
+                if sunod == "1":
+                    mabagal("\n========== FULL LESSON ==========")
+                    mabagal("\n+ Addition")
+                    mabagal("- Subtraction")
+                    mabagal("* Multiplication")
+                    mabagal("/ Division")
+                    mabagal("% Modulus (remainder)")
+                    mabagal("// Floor Division")
+                    mabagal("** Exponent")
+
+                    mabagal("\nDEMONSTRATION:")
+                    mabagal("num1 = 10")
+                    mabagal("num2 = 5")
+                    mabagal("print(num1 + num2)")
+                    mabagal("print(num1 - num2)")
+                    mabagal("print(num1 * num2)")
+                    mabagal("print(num1 / num2)")
+                    mabagal("print(num1 % num2)")
+                    mabagal("print(num1 // 3)")
+                    mabagal("print(num1 ** 2)")
+
+                    mabagal("\nOUTPUT:")
+                    mabagal("15")
+                    mabagal("5")
+                    mabagal("50")
+                    mabagal("2.0")
+                    mabagal("0")
+                    mabagal("3")
+                    mabagal("100")
+
+                    mabagal("\nEXPLANATION:")
+                    mabagal("+ Addition - adds two numbers.")
+                    mabagal("- Subtraction - subtracts numbers.")
+                    mabagal("* Multiplication - multiplies numbers.")
+                    mabagal("/ Division - divides numbers.")
+                    mabagal("% Modulus - returns the remainder.")
+                    mabagal("// Floor Division - divides and rounds down.")
+                    mabagal("** Exponent - raises a number to a power.")
+
+                elif sunod == "2":
+                    continue
+                else:
+                    mabagal("\nINVALID CHOICE!")
+                    continue
+
+            elif pili == "8":
+                mabagal("\nLESSON 8: BASIC INPUT AND OUTPUT")
+                mabagal("\nSHORT DESCRIPTION:")
+                mabagal("The input() function allows users to enter")
+                mabagal("information, while print() displays information.")
+
+                mabagal("\n[1] View Full Lesson")
+                mabagal("[2] Pick Another Lesson")
+
+                sunod = input("\nChoose: ")
+
+                if sunod == "1":
+                    mabagal("\n========== FULL LESSON ==========")
+                    mabagal("\nThe input() function allows users to enter")
+                    mabagal("information using their keyboard.")
+                    mabagal("The print() function displays the entered data.")
+
+                    mabagal("\nDEMONSTRATION:")
+                    mabagal('name = input("Enter your name: ")')
+                    mabagal("print(name)")
+
+                    mabagal("\nSAMPLE OUTPUT:")
+                    mabagal("Enter your name: Alex")
+                    mabagal("Alex")
+
+                elif sunod == "2":
+                    continue
+                else:
+                    mabagal("\nINVALID CHOICE!")
+                    continue
 
             else:
-                mabagal("INVALID CHOICE!")
+                mabagal("\nINVALID CHOICE!")
+                continue
+
+            mabagal("\n================================")
+            mabagal("[1] Pick Another Lesson")
+            mabagal("[2] Back to Main Menu")
+            mabagal("[0] Exit Program")
+
+            sunod = input("\nChoose: ")
+
+            if sunod == "1":
+                continue
+            elif sunod == "2":
+                break
+            elif sunod == "0":
+                tapos = False
+                break
+            else:
+                mabagal("\nINVALID CHOICE!")
+                continue
+
+        if not tapos:
+            mabagal("\nThank you for trying my program, " + pangalan + "!")
+
+    elif pili == "2":
+        while True:
+            mabagal("\n========== MIDTERM LESSONS ==========")
+            mabagal("[9] Conditional Statements")
+            mabagal("[10] Logical Operators")
+            mabagal("[0] Back to Main Menu")
+
+            pili = input("\nChoose a lesson: ")
+
+            if pili == "0":
+                break
+
+            elif pili == "9":
+                mabagal("\nLESSON 9: CONDITIONAL STATEMENTS")
+                mabagal("\nSHORT DESCRIPTION:")
+                mabagal("Conditional statements allow a program to make")
+                mabagal("decisions based on whether a condition is True.")
+
+                mabagal("\n[1] View Full Lesson")
+                mabagal("[2] Pick Another Lesson")
+
+                sunod = input("\nChoose: ")
+
+                if sunod == "1":
+                    mabagal("\n========== FULL LESSON ==========")
+                    mabagal("\nPython uses if, elif, and else to make decisions.")
+                    mabagal("The if statement checks the first condition.")
+                    mabagal("The elif statement checks another condition.")
+                    mabagal("The else statement runs when the other conditions")
+                    mabagal("are not met.")
+
+                    mabagal("\nDEMONSTRATION:")
+                    mabagal("age = 18")
+                    mabagal("if age >= 18:")
+                    mabagal('    print("Adult")')
+                    mabagal("else:")
+                    mabagal('    print("Minor")')
+
+                    mabagal("\nOUTPUT:")
+                    mabagal("Adult")
+
+                elif sunod == "2":
+                    continue
+                else:
+                    mabagal("\nINVALID CHOICE!")
+                    continue
+
+            elif pili == "10":
+                mabagal("\nLESSON 10: LOGICAL OPERATORS")
+                mabagal("\nSHORT DESCRIPTION:")
+                mabagal("Logical operators combine or reverse conditions")
+                mabagal("to help a program make decisions.")
+
+                mabagal("\n[1] View Full Lesson")
+                mabagal("[2] Pick Another Lesson")
+
+                sunod = input("\nChoose: ")
+
+                if sunod == "1":
+                    mabagal("\n========== FULL LESSON ==========")
+                    mabagal("\nAND - Both conditions must be True.")
+                    mabagal("OR - At least one condition must be True.")
+                    mabagal("NOT - Reverses a condition.")
+
+                    mabagal("\nDEMONSTRATION:")
+                    mabagal("age = 18")
+                    mabagal("has_id = True")
+                    mabagal("if age >= 18 and has_id:")
+                    mabagal('    print("Access Granted")')
+
+                    mabagal("\nOUTPUT:")
+                    mabagal("Access Granted")
+
+                elif sunod == "2":
+                    continue
+                else:
+                    mabagal("\nINVALID CHOICE!")
+                    continue
+
+            else:
+                mabagal("\nINVALID CHOICE!")
+                continue
+
+            mabagal("\n================================")
+            mabagal("[1] Pick Another Lesson")
+            mabagal("[2] Back to Main Menu")
+            mabagal("[0] Exit Program")
+
+            sunod = input("\nChoose: ")
+
+            if sunod == "1":
+                continue
+            elif sunod == "2":
+                break
+            elif sunod == "0":
+                tapos = False
+                break
+            else:
+                mabagal("\nINVALID CHOICE!")
+                continue
+
+        if not tapos:
+            mabagal("\nThank you for trying my program, " + pangalan + "!")
+
+    elif pili == "3":
+        while True:
+            mabagal("\n========== FINALS LESSONS ==========")
+            mabagal("[11] Introduction to Loops")
+            mabagal("[0] Back to Main Menu")
+
+            pili = input("\nChoose a lesson: ")
+
+            if pili == "0":
+                break
+
+            elif pili == "11":
+                mabagal("\nLESSON 11: INTRODUCTION TO LOOPS")
+                mabagal("\nSHORT DESCRIPTION:")
+                mabagal("Loops allow a program to repeat instructions")
+                mabagal("without writing the same code many times.")
+
+                mabagal("\n[1] View Full Lesson")
+                mabagal("[2] Pick Another Lesson")
+
+                sunod = input("\nChoose: ")
+
+                if sunod == "1":
+                    mabagal("\n========== FULL LESSON ==========")
+                    mabagal("\nThere are different types of loops in Python.")
+
+                    mabagal("\nFOR LOOP")
+                    mabagal("A for loop repeats instructions for each item")
+                    mabagal("in a sequence.")
+
+                    mabagal("\nDEMONSTRATION:")
+                    mabagal("for number in range(3):")
+                    mabagal('    print("Hello!")')
+
+                    mabagal("\nOUTPUT:")
+                    mabagal("Hello!")
+                    mabagal("Hello!")
+                    mabagal("Hello!")
+
+                    mabagal("\nWHILE LOOP")
+                    mabagal("A while loop repeats instructions as long as")
+                    mabagal("a condition remains True.")
+
+                    mabagal("\nDEMONSTRATION:")
+                    mabagal("count = 1")
+                    mabagal("while count <= 3:")
+                    mabagal("    print(count)")
+                    mabagal("    count = count + 1")
+
+                    mabagal("\nOUTPUT:")
+                    mabagal("1")
+                    mabagal("2")
+                    mabagal("3")
+
+                elif sunod == "2":
+                    continue
+                else:
+                    mabagal("\nINVALID CHOICE!")
+                    continue
+
+            else:
+                mabagal("\nINVALID CHOICE!")
+                continue
+
+            mabagal("\n================================")
+            mabagal("[1] Pick Another Lesson")
+            mabagal("[2] Back to Main Menu")
+            mabagal("[0] Exit Program")
+
+            sunod = input("\nChoose: ")
+
+            if sunod == "1":
+                continue
+            elif sunod == "2":
+                break
+            elif sunod == "0":
+                tapos = False
+                break
+            else:
+                mabagal("\nINVALID CHOICE!")
+                continue
+
+        if not tapos:
+            mabagal("\nThank you for trying my program, " + pangalan + "!")
+
+    else:
+        mabagal("\nINVALID CHOICE! Please select again.")
 
 
-mabagal("\n===================================")
-mabagal("          FINAL PROGRESS")
-mabagal("===================================")
-mabagal("Completed Lessons: " + str(len(progress)) + " / 11")
-mabagal("Completed Lesson Numbers: " + str(progress))
-mabagal("\nThank you for trying my program, " + pangalan + "!")
+mabagal("\n================================")
+mabagal("          PROGRAM ENDED")
+mabagal("==================================")

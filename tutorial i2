@@ -1,550 +1,438 @@
-tapos = True #mag rurun
+import time #print ng mabagal
+
+def mabagal(teksto):
+    for letra in teksto:
+        print(letra, end="", flush=True)
+        time.sleep(0.05)
+    print()
+
+
+pangalan = input("Enter your name: ")
+
+mabagal("\n===================================")
+mabagal("       WELCOME TO PYTHON TUTORIAL")
+mabagal("===================================")
+mabagal("Hello, " + pangalan + "!")
+mabagal("Let's start learning Python!")
+
+tapos = True
 progress = []
 
-while tapos:
-    print("\n================================")
-    print("         PYTHON TUTORIAL")
-    print("================================")
+mga_aralin = {
+    "1": "Introduction to Programming",
+    "2": "Basic Syntax",
+    "3": "Printing Output",
+    "4": "Python Comments",
+    "5": "Variables and Data",
+    "6": "Basic Data Types",
+    "7": "Arithmetic Operators",
+    "8": "Basic Input and Output",
+    "9": "Conditional Statements",
+    "10": "Logical Operators",
+    "11": "Introduction to Loops"
+}
 
-    print("\n========== LESSON PROGRESS ==========")
-    print("Completed Lessons:", len(progress), "/ 11")
+deskripsyon = {
+    "1": "Learn what programming is and how it works.",
+    "2": "Understand the basic rules when writing Python code.",
+    "3": "Learn how to display information using print().",
+    "4": "Understand how comments work in Python.",
+    "5": "Learn how to store information using variables.",
+    "6": "Understand the different types of data in Python.",
+    "7": "Learn how to perform mathematical operations.",
+    "8": "Learn how to receive and display user information.",
+    "9": "Learn how to make decisions using if, elif, and else.",
+    "10": "Understand how logical operators work.",
+    "11": "Learn how to repeat instructions using loops."
+}
+
+nilalaman = {
+    "1": """
+INTRODUCTION TO PROGRAMMING
+
+Programming is the process of creating instructions
+that tell a computer what to do.
+
+Python is one of the programming languages used
+to create different types of programs.
+
+DEMONSTRATION:
+
+print("Hello, World!")
+
+OUTPUT:
+Hello, World!
+""",
+
+    "2": """
+BASIC SYNTAX
+
+Syntax refers to the rules when writing Python code.
+Python is also case-sensitive, meaning uppercase
+and lowercase letters are different.
+
+DEMONSTRATION:
+
+name = "Alex"
+print(name)
+
+OUTPUT:
+Alex
+""",
+
+    "3": """
+PRINTING OUTPUT
+
+The print() function is used to display information
+on the screen. It can display words, numbers,
+and variables.
+
+DEMONSTRATION:
+
+print("Welcome to Python!")
+print(100)
+
+OUTPUT:
+Welcome to Python!
+100
+""",
+
+    "4": """
+PYTHON COMMENTS
+
+Comments are notes written inside the code.
+They help explain what a certain part of the program does.
+
+Comments begin with the # symbol and are ignored
+when Python runs the program.
+
+DEMONSTRATION:
+
+# This is a comment
+print("Learning Python")
+
+OUTPUT:
+Learning Python
+""",
+
+    "5": """
+VARIABLES AND DATA
+
+Variables are used to store information.
+You can assign different values to a variable.
+
+DEMONSTRATION:
+
+name = "Alex"
+age = 18
+
+print(name)
+print(age)
+
+OUTPUT:
+Alex
+18
+""",
+
+    "6": """
+BASIC DATA TYPES
+
+Python has different data types:
+
+String - stores text.
+Integer - stores whole numbers.
+Float - stores decimal numbers.
+Boolean - stores True or False.
+
+DEMONSTRATION:
+
+name = "Alex"
+age = 18
+height = 5.5
+is_student = True
+
+print(name)
+print(age)
+print(height)
+print(is_student)
+
+OUTPUT:
+Alex
+18
+5.5
+True
+""",
+
+    "7": """
+ARITHMETIC OPERATORS
+
+Arithmetic operators are used to perform
+mathematical operations in Python.
+
++  Addition
+-  Subtraction
+*  Multiplication
+/  Division
+%  Modulus
+// Floor Division
+** Exponent
+
+DEMONSTRATION:
+
+num1 = 10
+num2 = 5
+
+print(num1 + num2)
+print(num1 - num2)
+print(num1 * num2)
+print(num1 / num2)
+print(num1 % num2)
+print(num1 // 3)
+print(num1 ** 2)
+
+OUTPUT:
+15
+5
+50
+2.0
+0
+3
+100
+
+EXPLANATION:
+
++ Addition - adds two numbers.
+- Subtraction - subtracts one number from another.
+* Multiplication - multiplies two numbers.
+/ Division - divides two numbers.
+% Modulus - returns the remainder.
+// Floor Division - divides and rounds down.
+** Exponent - raises a number to a power.
+""",
+
+    "8": """
+BASIC INPUT AND OUTPUT
+
+The input() function allows users to enter
+information through the keyboard.
+
+The print() function displays the information.
+
+DEMONSTRATION:
+
+name = input("Enter your name: ")
+print("Hello", name)
+
+EXAMPLE OUTPUT:
+Enter your name: Alex
+Hello Alex
+""",
+
+    "9": """
+CONDITIONAL STATEMENTS
+
+Conditional statements allow a program to make
+decisions depending on a condition.
+
+if - checks the first condition.
+elif - checks another condition.
+else - runs when the other conditions are false.
+
+DEMONSTRATION:
+
+age = 18
+
+if age >= 18:
+    print("You are an adult.")
+else:
+    print("You are a minor.")
+
+OUTPUT:
+You are an adult.
+""",
+
+    "10": """
+LOGICAL OPERATORS
+
+Logical operators are used to combine or
+reverse conditions.
+
+and - both conditions must be True.
+or - at least one condition must be True.
+not - reverses the result.
+
+DEMONSTRATION:
+
+age = 18
+has_id = True
+
+if age >= 18 and has_id:
+    print("Access granted.")
+else:
+    print("Access denied.")
+
+OUTPUT:
+Access granted.
+""",
+
+    "11": """
+INTRODUCTION TO LOOPS
+
+Loops are used to repeat a block of code.
+
+for loop - repeats code for a specific sequence.
+while loop - repeats code while a condition is True.
+
+DEMONSTRATION:
+
+for number in range(3):
+    print("Hello")
+
+OUTPUT:
+Hello
+Hello
+Hello
+
+ANOTHER DEMONSTRATION:
+
+count = 1
+
+while count <= 3:
+    print(count)
+    count = count + 1
+
+OUTPUT:
+1
+2
+3
+"""
+}
+
+
+while tapos:
+
+    mabagal("\n===================================")
+    mabagal("           PYTHON TUTORIAL")
+    mabagal("===================================")
+
+    mabagal("\nLESSONS")
+
+    mabagal("\nPRELIM")
+    for number in range(1, 9):
+        mabagal("[" + str(number) + "] " + mga_aralin[str(number)])
+
+    mabagal("\nMIDTERM")
+    for number in range(9, 11):
+        mabagal("[" + str(number) + "] " + mga_aralin[str(number)])
+
+    mabagal("\nFINALS")
+    mabagal("[11] " + mga_aralin["11"])
+
+    mabagal("\n========== LESSON PROGRESS ==========")
+    mabagal("Completed Lessons: " + str(len(progress)) + " / 11")
 
     if len(progress) == 0:
-        print("No completed lessons yet.")
+        mabagal("No completed lessons yet.")
     else:
-        print("Completed Lesson Numbers:", progress)
+        mabagal("Completed Lesson Numbers: " + str(progress))
 
-    print("\nLESSONS")
+    mabagal("\n========== CHOICES ==========")
+    mabagal("[1] PRELIM")
+    mabagal("[2] MIDTERM")
+    mabagal("[3] FINALS")
+    mabagal("[0] EXIT")
 
-    print("\n--- PRELIM ---")
-    print("[1] Introduction to Programming")
-    print("[2] Basic Syntax")
-    print("[3] Printing Output")
-    print("[4] Python Comments")
-    print("[5] Variables and Data")
-    print("[6] Basic Data Types")
-    print("[7] Arithmetic Operators")
-    print("[8] Basic Input and Output")
-#miss u
-    print("\n--- MIDTERM ---")
-    print("[9] Conditional Statements")
-    print("[10] Logical Operators")
-
-    print("\n--- FINALS ---")
-    print("[11] Introduction to Loops")
-
-    print("\n================================")
-    print("             CHOICES")
-    print("================================")
-    print("[1] PRELIM")
-    print("[2] MIDTERM")
-    print("[3] FINALS")
-    print("[0] EXIT")
-
-    pili = input("\nChoose a term: ")
+    pili = input("\nEnter your choice: ")
 
     if pili == "0":
         tapos = False
-        print("\nThank you for using Python Tutorial!")
 
     elif pili == "1":
-        while True:
-            print("\n========== PRELIM LESSONS ==========")
-            print("[1] Introduction to Programming")
-            print("[2] Basic Syntax")
-            print("[3] Printing Output")
-            print("[4] Python Comments")
-            print("[5] Variables and Data")
-            print("[6] Basic Data Types")
-            print("[7] Arithmetic Operators")
-            print("[8] Basic Input and Output")
-            print("[0] Back to Main Menu")
-
-            pili = input("\nChoose a lesson: ")
-
-            if pili == "0":
-                break
-
-            elif pili == "1":
-                print("\nLESSON 1: INTRODUCTION TO PROGRAMMING")
-                print("\nSHORT DESCRIPTION:") #preview langs
-                print("Programming is the process of creating instructions")
-                print("that tell a computer what to do.")
-
-                print("\n[1] View Full Lesson")
-                print("[2] Pick Another Lesson")
-                sunod = input("\nChoose: ")
-
-                if sunod == "1":
-                    print("\n========== FULL LESSON ==========")
-                    print("Programming is the process of creating instructions")
-                    print("that tell a computer what to do.")
-                    print("These instructions are written using programming")
-                    print("languages such as Python, Java, and C++.")
-
-                    print("\nDEMONSTRATION:")
-                    print('print("Hello, World!")')
-
-                    print("\nOUTPUT:")
-                    print("Hello, World!")
-
-                    if "1" not in progress:
-                        progress.append("1")
-
-                elif sunod == "2":
-                    continue
-                else:
-                    print("\nINVALID CHOICE!")
-                    continue
-
-            elif pili == "2":
-                print("\nLESSON 2: BASIC SYNTAX")
-                print("\nSHORT DESCRIPTION:") #preview langs
-                print("Syntax refers to the rules and structure used")
-                print("when writing a program in Python.")
-
-                print("\n[1] View Full Lesson")
-                print("[2] Pick Another Lesson")
-                sunod = input("\nChoose: ")
-
-                if sunod == "1":
-                    print("\n========== FULL LESSON ==========")
-                    print("Python syntax refers to the rules that must")
-                    print("be followed when writing Python code.")
-                    print("Python is also case-sensitive, meaning that")
-                    print("uppercase and lowercase letters are different.")
-
-                    print("\nDEMONSTRATION:")
-                    print('name = "Alex"')
-                    print("print(name)")
-
-                    print("\nOUTPUT:")
-                    print("Alex")
-
-                    if "2" not in progress:
-                        progress.append("2")
-
-                elif sunod == "2":
-                    continue
-                else:
-                    print("\nINVALID CHOICE!")
-                    continue
-
-            elif pili == "3":
-                print("\nLESSON 3: PRINTING OUTPUT")
-                print("\nSHORT DESCRIPTION:")#preview langs
-                print("The print() function is used to display text,")
-                print("numbers, and other information on the screen.")
-
-                print("\n[1] View Full Lesson")
-                print("[2] Pick Another Lesson")
-                sunod = input("\nChoose: ")
-
-                if sunod == "1":
-                    print("\n========== FULL LESSON ==========")
-                    print("The print() function allows programmers to")
-                    print("display information on the screen.")
-                    print("It can display words, numbers, and variables.")
-
-                    print("\nDEMONSTRATION:")
-                    print('print("Welcome to Python!")')
-                    print("print(100)")
-
-                    print("\nOUTPUT:")
-                    print("Welcome to Python!")
-                    print("100")
-
-                    if "3" not in progress:
-                        progress.append("3")
-
-                elif sunod == "2":
-                    continue
-                else:
-                    print("\nINVALID CHOICE!")
-                    continue
-
-            elif pili == "4":
-                print("\nLESSON 4: PYTHON COMMENTS")
-                print("\nSHORT DESCRIPTION:")#preview langs
-                print("Comments are notes written inside a program.")
-                print("They help explain what a particular code does.")
-
-                print("\n[1] View Full Lesson")
-                print("[2] Pick Another Lesson")
-                sunod = input("\nChoose: ")
-
-                if sunod == "1":
-                    print("\n========== FULL LESSON ==========")
-                    print("Comments help programmers understand their code.")
-                    print("Python ignores comments when running a program.")
-                    print("A hashtag (#) is used to create a comment.")
-
-                    print("\nDEMONSTRATION:")
-                    print("# This is a comment")
-                    print('print("Learning Python")')
-
-                    print("\nOUTPUT:")
-                    print("Learning Python")
-
-                    if "4" not in progress:
-                        progress.append("4")
-
-                elif sunod == "2":
-                    continue
-                else:
-                    print("\nINVALID CHOICE!")
-                    continue
-
-            elif pili == "5":
-                print("\nLESSON 5: VARIABLES AND DATA")
-                print("\nSHORT DESCRIPTION:")#preview langs
-                print("Variables are used to store information that")
-                print("can be used and changed inside a program.")
-
-                print("\n[1] View Full Lesson")
-                print("[2] Pick Another Lesson")
-                sunod = input("\nChoose: ")
-
-                if sunod == "1":
-                    print("\n========== FULL LESSON ==========")
-                    print("A variable is a name used to store data.")
-                    print("It can contain information such as names,")
-                    print("numbers, and other values.")
-
-                    print("\nDEMONSTRATION:")
-                    print('name = "Alex"')
-                    print("age = 18")
-                    print("print(name)")
-                    print("print(age)")
-
-                    print("\nOUTPUT:")
-                    print("Alex")
-                    print("18")
-
-                    if "5" not in progress:
-                        progress.append("5")
-
-                elif sunod == "2":
-                    continue
-                else:
-                    print("\nINVALID CHOICE!")
-                    continue
-
-            elif pili == "6":
-                print("\nLESSON 6: BASIC DATA TYPES")
-                print("\nSHORT DESCRIPTION:")#preview langs
-                print("Data types identify what kind of information")
-                print("is stored in a variable.")
-
-                print("\n[1] View Full Lesson")
-                print("[2] Pick Another Lesson")
-                sunod = input("\nChoose: ")
-
-                if sunod == "1":
-                    print("\n========== FULL LESSON ==========")
-                    print("\nSTRING - Used for text.")
-                    print('Example: name = "Alex"')
-
-                    print("\nINTEGER - Used for whole numbers.")
-                    print("Example: age = 18")
-
-                    print("\nFLOAT - Used for decimal numbers.")
-                    print("Example: grade = 95.5")
-
-                    print("\nBOOLEAN - Used for True or False values.")
-                    print("Example: is_student = True")
-
-                    if "6" not in progress:
-                        progress.append("6")
-
-                elif sunod == "2":
-                    continue
-                else:
-                    print("\nINVALID CHOICE!")
-                    continue
-
-            elif pili == "7":
-                print("\nLESSON 7: ARITHMETIC OPERATORS")
-                print("\nSHORT DESCRIPTION:")
-                print("Arithmetic operators are symbols used to")
-                print("perform mathematical calculations in Python.")
-
-                print("\n[1] View Full Lesson")
-                print("[2] Pick Another Lesson")
-                sunod = input("\nChoose: ")
-
-                if sunod == "1":
-                    print("\n========== FULL LESSON ==========")
-                    print("\n+ Addition")
-                    print("- Subtraction")
-                    print("* Multiplication")
-                    print("/ Division")
-                    print("% Modulus (remainder)")
-
-                    print("\nDEMONSTRATION:")
-                    print("num1 = 10")
-                    print("num2 = 5")
-                    print("print(num1 + num2)")
-
-                    print("\nOUTPUT:")
-                    print("15")
-
-                    if "7" not in progress:
-                        progress.append("7")
-
-                elif sunod == "2":
-                    continue
-                else:
-                    print("\nINVALID CHOICE!")
-                    continue
-
-            elif pili == "8":
-                print("\nLESSON 8: BASIC INPUT AND OUTPUT")
-                print("\nSHORT DESCRIPTION:")
-                print("The input() function allows users to enter")
-                print("information, while print() displays information.")
-
-                print("\n[1] View Full Lesson")
-                print("[2] Pick Another Lesson")
-                sunod = input("\nChoose: ")
-
-                if sunod == "1":
-                    print("\n========== FULL LESSON ==========")
-                    print("The input() function allows users to enter")
-                    print("information using their keyboard.")
-                    print("The print() function displays the entered data.")
-
-                    print("\nDEMONSTRATION:")
-                    print('name = input("Enter your name: ")')
-                    print("print(name)")
-
-                    print("\nSAMPLE OUTPUT:")
-                    print("Enter your name: Alex")
-                    print("Alex")
-
-                    if "8" not in progress:
-                        progress.append("8")
-
-                elif sunod == "2":
-                    continue
-                else:
-                    print("\nINVALID CHOICE!")
-                    continue
-
-            else:
-                print("\nINVALID CHOICE!")
-                continue
-
-            print("\n================================")
-            print("[1] Pick Another Lesson")
-            print("[2] Back to Main Menu")
-            print("[0] Exit Program")
-
-            sunod = input("\nChoose: ")
-
-            if sunod == "1":
-                continue
-            elif sunod == "2":
-                break
-            elif sunod == "0":
-                tapos = False
-                break
-            else:
-                print("\nINVALID CHOICE!")
-                continue
+        saklaw = ["1", "2", "3", "4", "5", "6", "7", "8"]
 
     elif pili == "2":
-        while True:
-            print("\n========== MIDTERM LESSONS ==========")
-            print("[9] Conditional Statements")
-            print("[10] Logical Operators")
-            print("[0] Back to Main Menu")
-
-            pili = input("\nChoose a lesson: ")
-
-            if pili == "0":
-                break
-
-            elif pili == "9":
-                print("\nLESSON 9: CONDITIONAL STATEMENTS")
-                print("\nSHORT DESCRIPTION:")
-                print("Conditional statements allow a program to make")
-                print("decisions based on whether a condition is True.")
-
-                print("\n[1] View Full Lesson")
-                print("[2] Pick Another Lesson")
-                sunod = input("\nChoose: ")
-
-                if sunod == "1":
-                    print("\n========== FULL LESSON ==========")
-                    print("Python uses if, elif, and else to make decisions.")
-                    print("The if statement checks the first condition.")
-                    print("The elif statement checks another condition.")
-                    print("The else statement runs when the other conditions")
-                    print("are not met.")
-
-                    print("\nDEMONSTRATION:")
-                    print("age = 18")
-                    print("if age >= 18:")
-                    print('    print("Adult")')
-                    print("else:")
-                    print('    print("Minor")')
-
-                    print("\nOUTPUT:")
-                    print("Adult")
-
-                    if "9" not in progress:
-                        progress.append("9")
-
-                elif sunod == "2":
-                    continue
-                else:
-                    print("\nINVALID CHOICE!")
-                    continue
-
-            elif pili == "10":
-                print("\nLESSON 10: LOGICAL OPERATORS")
-                print("\nSHORT DESCRIPTION:")
-                print("Logical operators combine or reverse conditions")
-                print("to help a program make decisions.")
-
-                print("\n[1] View Full Lesson")
-                print("[2] Pick Another Lesson")
-                sunod = input("\nChoose: ")
-
-                if sunod == "1":
-                    print("\n========== FULL LESSON ==========")
-                    print("\nAND - Both conditions must be True.")
-                    print("OR - At least one condition must be True.")
-                    print("NOT - Reverses a condition.")
-
-                    print("\nDEMONSTRATION:")
-                    print("age = 18")
-                    print("has_id = True")
-                    print("if age >= 18 and has_id:")
-                    print('    print("Access Granted")')
-
-                    print("\nOUTPUT:")
-                    print("Access Granted")
-
-                    if "10" not in progress:
-                        progress.append("10")
-
-                elif sunod == "2":
-                    continue
-                else:
-                    print("\nINVALID CHOICE!")
-                    continue
-
-            else:
-                print("\nINVALID CHOICE!")
-                continue
-
-            print("\n================================")
-            print("[1] Pick Another Lesson")
-            print("[2] Back to Main Menu")
-            print("[0] Exit Program")
-
-            sunod = input("\nChoose: ")
-
-            if sunod == "1":
-                continue
-            elif sunod == "2":
-                break
-            elif sunod == "0":
-                tapos = False
-                break
-            else:
-                print("\nINVALID CHOICE!")
-                continue
+        saklaw = ["9", "10"]
 
     elif pili == "3":
+        saklaw = ["11"]
+
+    else:
+        mabagal("INVALID CHOICE!")
+        continue
+
+    if tapos == True:
         while True:
-            print("\n========== FINALS LESSONS ==========")
-            print("[11] Introduction to Loops")
-            print("[0] Back to Main Menu")
+
+            mabagal("\n========== LESSON MENU ==========")
+
+            for number in saklaw:
+                mabagal("[" + number + "] " + mga_aralin[number])
+
+            mabagal("[0] BACK TO MAIN MENU")
 
             pili = input("\nChoose a lesson: ")
 
             if pili == "0":
                 break
 
-            elif pili == "11":
-                print("\nLESSON 11: INTRODUCTION TO LOOPS")
-                print("\nSHORT DESCRIPTION:")
-                print("Loops allow a program to repeat instructions")
-                print("without writing the same code many times.")
+            elif pili in saklaw:
 
-                print("\n[1] View Full Lesson")
-                print("[2] Pick Another Lesson")
-                sunod = input("\nChoose: ")
+                mabagal("\n========== LESSON DESCRIPTION ==========")
+                mabagal(mga_aralin[pili])
+                mabagal("\n" + deskripsyon[pili])
+
+                mabagal("\n[1] View Full Lesson")
+                mabagal("[2] Pick Another Lesson")
+
+                sunod = input("\nEnter your choice: ")
 
                 if sunod == "1":
-                    print("\n========== FULL LESSON ==========")
-                    print("There are different types of loops in Python.")
 
-                    print("\nFOR LOOP")
-                    print("A for loop repeats instructions for each item")
-                    print("in a sequence.")
+                    mabagal("\n===================================")
+                    mabagal(mga_aralin[pili])
+                    mabagal("===================================")
 
-                    print("\nDEMONSTRATION:")
-                    print("for number in range(3):")
-                    print('    print("Hello!")')
+                    mabagal(nilalaman[pili])
 
-                    print("\nOUTPUT:")
-                    print("Hello!")
-                    print("Hello!")
-                    print("Hello!")
+                    if pili not in progress:
+                        progress.append(pili)
 
-                    print("\nWHILE LOOP")
-                    print("A while loop repeats instructions as long as")
-                    print("a condition remains True.")
+                    mabagal("\nLesson completed!")
 
-                    print("\nDEMONSTRATION:")
-                    print("count = 1")
-                    print("while count <= 3:")
-                    print("    print(count)")
-                    print("    count = count + 1")
+                    mabagal("\n========== NEXT ACTION ==========")
+                    mabagal("[1] Pick Another Lesson")
+                    mabagal("[2] Back to Main Menu")
+                    mabagal("[0] Exit Program")
 
-                    print("\nOUTPUT:")
-                    print("1")
-                    print("2")
-                    print("3")
+                    sunod = input("\nEnter your choice: ")
 
-                    if "11" not in progress:
-                        progress.append("11")
+                    if sunod == "1":
+                        continue
+
+                    elif sunod == "2":
+                        break
+
+                    elif sunod == "0":
+                        tapos = False
+                        break
+
+                    else:
+                        mabagal("INVALID CHOICE!")
+                        continue
 
                 elif sunod == "2":
                     continue
+
                 else:
-                    print("\nINVALID CHOICE!")
-                    continue
+                    mabagal("INVALID CHOICE!")
 
             else:
-                print("\nINVALID CHOICE!")
-                continue
+                mabagal("INVALID CHOICE!")
 
-            print("\n================================")
-            print("[1] Pick Another Lesson")
-            print("[2] Back to Main Menu")
-            print("[0] Exit Program")
 
-            sunod = input("\nChoose: ")
-
-            if sunod == "1":
-                continue
-            elif sunod == "2":
-                break
-            elif sunod == "0":
-                tapos = False
-                break
-            else:
-                print("\nINVALID CHOICE!")
-                continue
-
-    else:
-        print("\nINVALID CHOICE! Please select again.")
-
-print("\n========== FINAL PROGRESS ==========")
-print("Completed Lessons:", len(progress), "/ 11")
-print("Completed Lesson Numbers:", progress)
+mabagal("\n===================================")
+mabagal("          FINAL PROGRESS")
+mabagal("===================================")
+mabagal("Completed Lessons: " + str(len(progress)) + " / 11")
+mabagal("Completed Lesson Numbers: " + str(progress))
+mabagal("\nThank you for trying my program, " + pangalan + "!")
